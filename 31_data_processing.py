@@ -119,7 +119,7 @@ print(conn.list_collection_ids())
 conn.describe_collection("SENTINEL2_L2A")
 
 
-# ## Define a workflow
+# ### Define a workflow
 # We will define our workflow now. And chain all the processes together we need for analyzing the snow cover in the catchment.
 # 
 # - Load a data cube with specific filters
@@ -256,7 +256,7 @@ snowmap_cloudfree_1d.download('31_results/snowmap_cloudfree_1d.nc')
 xr.open_dataarray('31_results/snowmap_cloudfree_1d.nc',decode_coords="all")[0].plot.imshow()
 
 
-# ## Calculate Catchment Statistics
+# ### Calculate Catchment Statistics
 # 
 # We are looking at the snow cover of a region over time and want to extract aggregated catchment statistics on snow cover and cloud cover. We do this by counting all the pixels in the catchment, counting the pixels that are covered by snow and the pixels covered by clouds.
 # 
